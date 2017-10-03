@@ -1,0 +1,25 @@
+public class Chapter1_1_Population {
+
+	 
+	public static void main(String[] args) {
+		
+		double currentPopulation=312032486;
+		double populationInSec=365*24*60*60;
+
+		double oneBirthInSecond = populationInSec/7;
+		double oneDeathInSecond = populationInSec/13;
+		double oneImmigratInSecond = populationInSec/45;
+	
+		for(int year = 1; year <= 5; year ++ ){
+			double newCurrentPopulation = currentPopulation + (oneBirthInSecond 
+			- oneDeathInSecond + oneImmigratInSecond)*year;
+			System.out.println("The population: " + year +"year:" +  (int)newCurrentPopulation); 
+		
+		}
+		
+		
+	}
+
+}
+
+
